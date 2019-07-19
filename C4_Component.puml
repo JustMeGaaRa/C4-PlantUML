@@ -1,4 +1,4 @@
-!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml
+!includeurl https://raw.githubusercontent.com/JustMeGaaRa/C4-PlantUML/master/C4_Container.puml
 ' uncomment the following line and comment the first to use locally
 ' !include C4_Container.puml
 
@@ -29,6 +29,8 @@ skinparam database<<component>> {
     BorderColor #78A8D8
 }
 
+hide stereotype
+
 ' Layout
 ' ##################################
 
@@ -48,8 +50,8 @@ endlegend
 ' Elements
 ' ##################################
 
-!define Component(e_alias, e_label, e_techn) rectangle "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//" <<component>> as e_alias
-!define Component(e_alias, e_label, e_techn, e_descr) rectangle "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//\n\n e_descr" <<component>> as e_alias
+!define Component(e_alias, e_label, e_techn) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Component: e_techn]</size>" <<component>> as e_alias
+!define Component(e_alias, e_label, e_techn, e_descr) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Component: e_techn]</size>\n\n <size:DESCR_FONR_SIZE>e_descr</size>" <<component>> as e_alias
 
-!define ComponentDb(e_alias, e_label, e_techn) database "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//" <<component>> as e_alias
-!define ComponentDb(e_alias, e_label, e_techn, e_descr) database "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//\n\n e_descr" <<component>> as e_alias
+!define ComponentDb(e_alias, e_label, e_techn) database "==e_label\n<size:TECHN_FONT_SIZE>[Component: e_techn]</size>" <<component>> as e_alias
+!define ComponentDb(e_alias, e_label, e_techn, e_descr) database "==e_label\n<size:TECHN_FONT_SIZE>[Component: e_techn]</size>\n\n <size:DESCR_FONR_SIZE>e_descr</size>" <<component>> as e_alias

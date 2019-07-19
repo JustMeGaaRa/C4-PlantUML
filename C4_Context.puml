@@ -1,4 +1,4 @@
-!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4.puml
+!includeurl https://raw.githubusercontent.com/JustMeGaaRa/C4-PlantUML/master/C4.puml
 ' uncomment the following line and comment the first to use locally
 ' !include C4.puml
 
@@ -60,6 +60,8 @@ skinparam database<<external_system>> {
     BorderColor #8A8A8A
 }
 
+hide stereotype
+
 ' Layout
 ' ##################################
 
@@ -77,23 +79,23 @@ endlegend
 ' Elements
 ' ##################################
 
-!define Person(e_alias, e_label) rectangle "==e_label" <<person>> as e_alias
-!define Person(e_alias, e_label, e_descr) rectangle "==e_label\n\n e_descr" <<person>> as e_alias
+!define Person(e_alias, e_label) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Person]</size>" <<person>> as e_alias
+!define Person(e_alias, e_label, e_descr) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Person]</size>\n\n <size:DESCR_FONR_SIZE>e_descr</size>" <<person>> as e_alias
 
-!define Person_Ext(e_alias, e_label) rectangle "==e_label" <<external_person>> as e_alias
-!define Person_Ext(e_alias, e_label, e_descr) rectangle "==e_label\n\n e_descr" <<external_person>> as e_alias
+!define Person_Ext(e_alias, e_label) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Person]</size>" <<external_person>> as e_alias
+!define Person_Ext(e_alias, e_label, e_descr) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Person]</size>\n\n <size:DESCR_FONR_SIZE>e_descr</size>" <<external_person>> as e_alias
 
-!define System(e_alias, e_label) rectangle "==e_label" <<system>> as e_alias
-!define System(e_alias, e_label, e_descr) rectangle "==e_label\n\n e_descr" <<system>> as e_alias
+!define System(e_alias, e_label) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[System]</size>" <<system>> as e_alias
+!define System(e_alias, e_label, e_descr) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[System]</size>\n\n <size:DESCR_FONR_SIZE>e_descr</size>" <<system>> as e_alias
 
-!define System_Ext(e_alias, e_label) rectangle "==e_label" <<external_system>> as e_alias
-!define System_Ext(e_alias, e_label, e_descr) rectangle "==e_label\n\n e_descr" <<external_system>> as e_alias
+!define System_Ext(e_alias, e_label) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[System]</size>" <<external_system>> as e_alias
+!define System_Ext(e_alias, e_label, e_descr) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[System]</size>\n\n <size:DESCR_FONR_SIZE>e_descr</size>" <<external_system>> as e_alias
 
-!define SystemDb(e_alias, e_label) database "==e_label" <<system>> as e_alias
-!define SystemDb(e_alias, e_label, e_descr) database "==e_label\n\n e_descr" <<system>> as e_alias
+!define SystemDb(e_alias, e_label) database "==e_label\n<size:TECHN_FONT_SIZE>[Database]</size>" <<system>> as e_alias
+!define SystemDb(e_alias, e_label, e_descr) database "==e_label\n<size:TECHN_FONT_SIZE>[Database]</size>\n\n <size:DESCR_FONR_SIZE>e_descr</size>" <<system>> as e_alias
 
-!define SystemDb_Ext(e_alias, e_label) database "==e_label" <<external_system>> as e_alias
-!define SystemDb_Ext(e_alias, e_label, e_descr) database "==e_label\n\n e_descr" <<external_system>> as e_alias
+!define SystemDb_Ext(e_alias, e_label) database "==e_label\n<size:TECHN_FONT_SIZE>[Database]</size>" <<external_system>> as e_alias
+!define SystemDb_Ext(e_alias, e_label, e_descr) database "==e_label\n<size:TECHN_FONT_SIZE>[Database]</size>\n\n <size:DESCR_FONR_SIZE>e_descr</size>" <<external_system>> as e_alias
 
 ' Boundaries
 ' ##################################

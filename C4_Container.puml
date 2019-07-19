@@ -1,4 +1,4 @@
-!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Context.puml
+!includeurl https://raw.githubusercontent.com/JustMeGaaRa/C4-PlantUML/master/C4_Context.puml
 ' uncomment the following line and comment the first to use locally
 ' !include C4_Context.puml
 
@@ -29,6 +29,8 @@ skinparam database<<container>> {
     BorderColor #3C7FC0
 }
 
+hide stereotype
+
 ' Layout
 ' ##################################
 
@@ -47,11 +49,11 @@ endlegend
 ' Elements
 ' ##################################
 
-!define Container(e_alias, e_label, e_techn) rectangle "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//" <<container>> as e_alias
-!define Container(e_alias, e_label, e_techn, e_descr) rectangle "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//\n\n e_descr" <<container>> as e_alias
+!define Container(e_alias, e_label, e_techn) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Container: e_techn]</size>" <<container>> as e_alias
+!define Container(e_alias, e_label, e_techn, e_descr) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Container: e_techn]</size>\n\n <size:DESCR_FONR_SIZE>e_descr</size>" <<container>> as e_alias
 
-!define ContainerDb(e_alias, e_label, e_techn) database "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//" <<container>> as e_alias
-!define ContainerDb(e_alias, e_label, e_techn, e_descr) database "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//\n\n e_descr" <<container>> as e_alias
+!define ContainerDb(e_alias, e_label, e_techn) database "==e_label\n<size:TECHN_FONT_SIZE>[Container: e_techn]</size>" <<container>> as e_alias
+!define ContainerDb(e_alias, e_label, e_techn, e_descr) database "==e_label\n<size:TECHN_FONT_SIZE>[Container: e_techn]</size>\n\n <size:DESCR_FONR_SIZE>e_descr</size>" <<container>> as e_alias
 
 ' Boundaries
 ' ##################################
